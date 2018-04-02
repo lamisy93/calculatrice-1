@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-esquiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ma calculatrice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="calculator">
+        <div id="header">
+          <input type="text" id="number" value="0" disabled="disabled"/>
+        </div>
+        <div id="body">
+          <div class="buttons">7</div>
+          <div class="buttons">8</div>
+          <div class="buttons">9</div>
+          <div class="buttons">/</div>
+          <div class="buttons">4</div>
+          <div class="buttons">5</div>
+          <div class="buttons">6</div>
+          <div class="buttons">*</div>
+          <div class="buttons">1</div>
+          <div class="buttons">2</div>
+          <div class="buttons">3</div>
+          <div class="buttons">-</div>
+          <div class="buttons">0</div>
+          <div class="buttons">.</div>
+          <div class="buttons">=</div>
+          <div class="buttons">+</div>
+          <div class="buttons" id="reset">C</div>
+        </div>
+      </div>
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      const calc = new Calculator();
+      calc.run();
+    });
+    </script>
+  </body>
+</html>
