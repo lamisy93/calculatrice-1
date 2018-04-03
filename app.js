@@ -30,14 +30,16 @@ function Calculator()
         this.operation(value, "*");
      if ($(this.field).val().indexOf("-") != -1)
         this.operation(value, "-");
-     if ($(this.field).val().indexOf("=") != -1)
+     if ($(this.field).val().indexOf("+") != -1)
         this.operation(value, "+");
+    if ($(this.field).val().indexOf("=") != -1)
+        this.operation(value, "=");
   },
 
   this.operation = function(value, symbol)
   {
-     const numbers = $(this.field).val().split(symbol),
-         result;
+    const numbers = $(this.field).val().split(symbol);
+    var result;
 
      if (symbol == "/")
          result = numbers[0] / numbers[1];
@@ -50,7 +52,7 @@ function Calculator()
 
      result = Math.round((result) * 100) / 100;
 
-     if (numbers.lengt > 1)
+     if (numbers.length > 1)
      {
        if (value == "=")
           $(this.field).val(result);
